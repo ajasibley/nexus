@@ -1,4 +1,8 @@
-{ pkgs ? import <nixpkgs> { overlays = [ (import ./vespa-cli-overlay.nix) ]; } }:
+{ pkgs ? import <nixpkgs> {
+    overlays = [ (import ./vespa-cli-overlay.nix) ];
+    config = { allowUnfree = true; };
+  }
+}:
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
@@ -7,6 +11,9 @@ pkgs.mkShell {
     tree
     poetry
     vespa-cli
+    natscli
+    nats-server
+    ngrok
   ];
   shellHook = ''
     cat <<'EOF'

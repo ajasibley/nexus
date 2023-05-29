@@ -133,19 +133,13 @@ You're all set! You can start building your project and explore the Nexus reposi
 
 To send peer to peer pub-sub messages NATS is an excellent tool. This will walk you through setting up a NATS server and client to publish and subscribe to messages and expose your server using ngrok.
 
-## Server Installation
+## Server Setup
 
-1. Download the NATS server from the [releases page](https://github.com/nats-io/nats-server/releases/) or follow the [installation instructions](https://docs.nats.io/running-a-nats-service/introduction/installation) provided in the official NATS documentation.
-
-2. Start the NATS server by running the following command:
+Start the NATS server by running the following command:
 
    ```
    nats-server
    ```
-
-## Client Installation (NATS CLI)
-
-1. Download the NATS CLI from the [releases page](https://github.com/nats-io/natscli/releases/) or follow the [CLI instructions](https://docs.nats.io/using-nats/nats-tools/nats_cli) provided in the official NATS documentation.
 
 ## Exposing NATS Server with ngrok
 
