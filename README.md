@@ -128,3 +128,53 @@ cosmo launch
 Now you can access your project from any web browser using the provided URL!
 
 You're all set! You can start building your project and explore the Nexus repository. Happy coding!
+
+# NATS Server and Client Setup
+
+To send peer to peer pub-sub messages NATS is an excellent tool. This will walk you through setting up a NATS server and client to publish and subscribe to messages and expose your server using ngrok.
+
+## Server Setup
+
+Start the NATS server by running the following command:
+
+   ```
+   nats-server
+   ```
+
+## Exposing NATS Server with ngrok
+
+1. Sign up for an account and download ngrok from the [official website](https://ngrok.com/download).
+
+2. Follow the [ngrok getting started guide](https://ngrok.com/docs/getting-started/) to set up ngrok on your system.
+
+3. Go to the [ngrok dashboard](https://dashboard.ngrok.com/get-started/your-authtoken) to get your auth token.
+
+4. Set your auth token with the following command:
+
+   ```
+   ngrok config add-authtoken <auth_token>
+   ```
+
+5. Connect ngrok to your NATS server over TCP with the following command:
+
+   ```
+   ngrok tcp 4222
+   ```
+
+6. ngrok will provide you with a URL that looks like this: `tcp://8.tcp.ngrok.io:13164`. You can use this URL to connect to your NATS server with the NATS client.
+
+## Subscribing and Publishing with NATS CLI
+
+1. To subscribe to messages, run the following command:
+
+   ```
+   nats sub -s <ngrok_tcp_url>
+   ```
+
+2. To publish a message, run the following command:
+
+   ```
+   nats pub <subject> <body>
+   ```
+
+That's it! You have now set up a NATS server and client, and you can publish and subscribe to messages using the NATS CLI.
