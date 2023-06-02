@@ -38,4 +38,5 @@ restart-shell-message:
     @echo
     @echo "\033[1;33mPlease restart your shell to refresh the source before launching Cosmonic.\033[0m"
 
-all: install-nix install-rust install-wasm-target install-openssl install-cosmo restart-shell-message
+play: install-nix install-openssl install-cosmo restart-shell-message
+build: install-nix install-rust install-wasm-target install-openssl install-cosmo restart-shell-message
