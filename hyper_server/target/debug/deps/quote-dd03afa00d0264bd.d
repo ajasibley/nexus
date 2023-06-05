@@ -1,0 +1,13 @@
+/Users/aja/Documents/Projects/Plurigrid/nexus/hyper_server/target/debug/deps/quote-dd03afa00d0264bd.rmeta: /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/lib.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/ext.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/format.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/ident_fragment.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/to_tokens.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/runtime.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/spanned.rs
+
+/Users/aja/Documents/Projects/Plurigrid/nexus/hyper_server/target/debug/deps/libquote-dd03afa00d0264bd.rlib: /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/lib.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/ext.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/format.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/ident_fragment.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/to_tokens.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/runtime.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/spanned.rs
+
+/Users/aja/Documents/Projects/Plurigrid/nexus/hyper_server/target/debug/deps/quote-dd03afa00d0264bd.d: /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/lib.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/ext.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/format.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/ident_fragment.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/to_tokens.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/runtime.rs /Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/spanned.rs
+
+/Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/lib.rs:
+/Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/ext.rs:
+/Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/format.rs:
+/Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/ident_fragment.rs:
+/Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/to_tokens.rs:
+/Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/runtime.rs:
+/Users/aja/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.28/src/spanned.rs:

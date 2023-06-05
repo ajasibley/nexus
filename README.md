@@ -6,14 +6,10 @@ Welcome to the Nexus! This README will guide you through setting up your develop
 
 Before you begin, make sure you have the following installed on your system:
 
-- [Nix](https://nixos.org)
+- [Just](https://just.systems/)
 - [Git](https://git-scm.com/)
-- [Rust](https://www.rust-lang.org/)
-- wasm32-unknown-unknown target
-- [OpenSSL 1.1](https://www.openssl.org/)
-- [Cosmoonic](https://cosmonic.com)
 
-## Getting Started
+## Getting Started with Cosmonic
 
 1. Clone the repository and navigate to the project directory:
 
@@ -22,16 +18,38 @@ git clone https://github.com/plurigrid/nexus.git
 cd nexus
 ```
 
-2. Start nix shell and run the following command to install all required dependencies:
+2. Depending if you are going to be building your own apps or just running them you can run either `play` or `build` respectivly:
+
+```bash
+just play
+```
+
+- or -
+
+```bash
+just build
+```
+
+Play will automatically check for and install OpenSSL 1.1, Nix, and Cosmonic if they are not already installed on your system. Build will install all that plus Rust and the wasm32-unknown-unknown target to compile to.
+
+3. Once the dependenices have been installed you can start a nix shell, this will drop you into an environment with all the rest of the dependencies installed:
 
 ```bash
 nix-shell
-make all
 ```
 
-This will automatically check for and install Rust, wasm32-unknown-unknown target, OpenSSL 1.1, and Cosmo CLI if they are not already installed on your system.
+4. You can now run your Actors by navigating to thier directory and launching them with Cosmonic:
 
-3. Create a new actor using Cosmo CLI:
+```bash
+cd actors/<actor_name>
+cosmo launch
+```
+
+Replace `<actor_name>` with the name of the acotor direcory you wish to launch from.
+
+## Building with Cosmonic
+
+1. Create a new actor using Cosmo CLI:
 
 ```bash
 cosmo new actor <your_project_name>
@@ -39,13 +57,13 @@ cosmo new actor <your_project_name>
 
 Replace `<your_project_name>` with your desired project name.
 
-4. Navigate to your newly created project directory:
+2. Navigate to your newly created project directory:
 
 ```bash
 cd <your_project_name>
 ```
 
-5. Edit `src/lib.rs` file in your favorite text editor.
+3. Edit `src/lib.rs` file in your favorite text editor.
 
 The default file content looks like this:
 
@@ -87,43 +105,42 @@ impl HttpServer for <your_project_name>Actor {
 }
 
 ```
-## Launching the Project
 
-1. Login to Cosmonic:
+4. Login to Cosmonic:
 
 ```bash
 cosmo login
 ```
 
-2. Build and sign your actor:
+5. Build and sign your actor:
 
 ```bash
 cosmo build
 ```
 
-3. Start your wasmCloud host:
+6. Start your wasmCloud host:
 
 ```bash
 cosmo up
 ```
 
-4. Launch the actor using Cosmo CLI:
+7. Launch the actor using Cosmo CLI:
 
 ```bash
 cosmo launch
 ```
 
-5. Navigate to [Cosmonic App](https://app.cosmonic.com) and sign in with your account.
+8. Navigate to [Cosmonic App](https://app.cosmonic.com) and sign in with your account.
 
-6. In the Logic view, you should see the new actor you just launched.
+9. In the Logic view, you should see the new actor you just launched.
 
-7. To make your actor accessible from the web, launch a new provider for an HTTP server with the following OCI URL: `cosmonic.azurecr.io/httpserver_wormhole:0.5.3`. Give the link a name, and note that the HTTP server must be launched on a Cosmonic Manager resource.
+10. To make your actor accessible from the web, launch a new provider for an HTTP server with the following OCI URL: `cosmonic.azurecr.io/httpserver_wormhole:0.5.3`. Give the link a name, and note that the HTTP server must be launched on a Cosmonic Manager resource.
 
-8. Once the HTTP server is launched, link it to your actor.
+11. Once the HTTP server is launched, link it to your actor.
 
-9. Launch a wormhole and connect it to your actor link (the HTTP server and the actor).
+12. Launch a wormhole and connect it to your actor link (the HTTP server and the actor).
 
-10. Your actor should now be accessible at the domain of the wormhole followed by `.cosmonic.app`. For example: `https://white-morning-5041.cosmonic.app`.
+13. Your actor should now be accessible at the domain of the wormhole followed by `.cosmonic.app`. For example: `https://white-morning-5041.cosmonic.app`.
 
 Now you can access your project from any web browser using the provided URL!
 
